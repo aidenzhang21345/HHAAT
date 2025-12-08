@@ -14,7 +14,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import frc.robot.autons.ExampleAuton;
+//import frc.robot.autons.ExampleAuton;
+import frc.robot.autons.Path1Auton;
+import frc.robot.autons.Path2Auton;
 import frc.robot.driveCommands.ArcadeDrive;
 import frc.robot.driveCommands.TankDrive;
 import frc.robot.subsystems.Drivetrain;
@@ -72,7 +74,7 @@ public class RobotContainer {
         .onFalse(new PrintCommand("Button A Released"));
 
     // Setup SmartDashboard options
-    m_chooser.setDefaultOption("Example Auton", new ExampleAuton(m_drivetrain));
+  //  m_chooser.setDefaultOption("Example Auton", new ExampleAuton(m_drivetrain));
     
     /* ROOKIES, ADD YOUR AUTONS HERE!
      * EX:
@@ -80,6 +82,8 @@ public class RobotContainer {
     */
 
     SmartDashboard.putData(m_chooser);
+    m_chooser.addOption("Path1Auton", Path1Auton);
+    m_c
   }
 
   /**
