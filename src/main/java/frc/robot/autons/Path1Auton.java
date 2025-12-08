@@ -15,7 +15,7 @@ import frc.robot.commands.DriveDistance;
 public class Path1Auton extends SequentialCommandGroup {
     public Path1Auton(Drivetrain drivetrain) {
         addCommands( // assume the robot is facing out the exit of the base
-            new DriveDistance(1.0, 4.0, drivetrain), // double speed, double inches, Drivetrain drive
+            new DriveDistance(1.0, 9.0, drivetrain), // double speed, double inches, Drivetrain drive
             new TurnDegrees(1.0, -90, drivetrain), // 1 double speed, double deg, double inches, Drivetrain drivetrain
 
             new DriveDistance(1.0, 1.0, drivetrain),
