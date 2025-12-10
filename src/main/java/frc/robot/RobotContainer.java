@@ -31,8 +31,6 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final Drivetrain m_drivetrain = new Drivetrain();
   private final OnBoardIO m_onboardIO = new OnBoardIO(ChannelMode.INPUT, ChannelMode.INPUT);
-  private final Path1Auton path1Auton = new Path1Auton(m_drivetrain);
-  private final Path2Auton path2Auton = new Path2Auton(m_drivetrain);
   
 
   // Assumes a gamepad plugged into channel 0
@@ -85,8 +83,8 @@ public class RobotContainer {
     */
 
     SmartDashboard.putData(m_chooser);
-    m_chooser.addOption("Path1Auton", path1Auton);
-    m_chooser.addOption("Path2Auton", path2Auton);
+    m_chooser.addOption("Path1Auton", new Path1Auton(m_drivetrain));
+    m_chooser.addOption("Path2Auton", new Path2Auton(m_drivetrain));
   }
 
   /**
