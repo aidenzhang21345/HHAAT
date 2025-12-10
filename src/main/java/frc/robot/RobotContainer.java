@@ -66,13 +66,15 @@ public class RobotContainer {
     // Default command is arcade drive. This will run unless another command
     // is scheduled over it.
     // m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
-    m_drivetrain.setDefaultCommand(getTankDriveCommand());
+    m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
 
     // Example of how to use the onboard IO
     Trigger onboardButtonA = new Trigger(m_onboardIO::getButtonAPressed);
     onboardButtonA
         .onTrue(new PrintCommand("Button A Pressed"))
         .onFalse(new PrintCommand("Button A Released"));
+    
+
 
     // Setup SmartDashboard options
   //  m_chooser.setDefaultOption("Example Auton", new ExampleAuton(m_drivetrain));
