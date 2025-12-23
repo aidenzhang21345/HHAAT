@@ -105,7 +105,7 @@ public class RobotContainer {
    */
   public Command getArcadeDriveCommand() {
     return new ArcadeDrive(
-        m_drivetrain, () -> -m_controller.getRawAxis(1), () -> -m_controller.getRawAxis(0));
+        m_drivetrain, () -> -m_controller.getRawAxis(1)/2, () -> -m_controller.getRawAxis(0)/2);
   }
 
   public Command getTankDriveCommand() {

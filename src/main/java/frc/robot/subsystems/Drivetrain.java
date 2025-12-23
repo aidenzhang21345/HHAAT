@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj.romi.RomiGyro;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 public class Drivetrain extends SubsystemBase {
   private static final double kCountsPerRevolution = 1440.0;
   private static final double kWheelDiameterInch = 2.75591; // 70 mm
@@ -136,7 +138,7 @@ public class Drivetrain extends SubsystemBase {
    * @return The current angle of the Romi in degrees
    */
   public double getGyroAngleZ() {
-    return m_gyro.getAngleZ();
+    return m_gyro.getAngleZ() % 360;
   }
 
   /** Reset the gyro. */
@@ -147,5 +149,6 @@ public class Drivetrain extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+    //SmartDashboard.putNumber("Drivetrain/gyro ang;e", m_gyro.getAngleX());
   }
 }
