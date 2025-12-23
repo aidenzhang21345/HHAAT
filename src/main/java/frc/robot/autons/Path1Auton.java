@@ -17,7 +17,7 @@ public class Path1Auton extends SequentialCommandGroup {
     public Path1Auton(Drivetrain drivetrain) {
         addCommands( // assume the robot is facing out the exit of the base
             new DriveDistance(0.4, 18.0, drivetrain), // double speed, double inches, Drivetrain drive
-            new DriveTurn(0.5, -90, 1 , drivetrain), // 1 double speed, double deg, double inches, Drivetrain drivetrain
+            new DriveTurn(0.4, -90, 1 , drivetrain), // 1 double speed, double deg, double inches, Drivetrain drivetrain
 
             new DriveDistance(0.4, 11.0, drivetrain),
             new DriveTurn(0.5, 90, 1 , drivetrain), 
